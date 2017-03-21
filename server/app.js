@@ -11,6 +11,7 @@ var Question      = require('./models/question');
 
 var index         = require('./routes/index');
 var users         = require('./routes/users');
+var questions     = require('./routes/questions');
 
 var mongoose      = require('mongoose');
 mongoose.Promise  = global.Promise;
@@ -34,6 +35,7 @@ app.use(cors());
 
 app.use('/', index);
 app.use('/user', users);
+app.use('/question', questions);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -50,7 +52,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send(err);
 });
 
 module.exports = app;

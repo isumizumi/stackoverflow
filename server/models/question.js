@@ -3,11 +3,26 @@ var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema
 
 var questionSchema  = Schema({
-  user_id: { type: Schema.Types.ObjectId, ref: 'User' },
+  user_id: { type: Number, ref: 'User' },
   title: String,
   content: String,
-  answer: Schema.Types.Mixed,
-  vote: Schema.Types.Mixed
+  answer: [{
+    user_id: { type: Number, ref: 'User' },
+    comment: String,
+    author: String,
+    upvote: [],
+    downvote: []
+  }],
+  upvote: [{
+    user_id: { type: Number, ref: 'User' },
+    voter: String
+  }],
+  downvote: [{
+    user_id: { type: Number, ref: 'User' },
+    voter: String
+  }],
+  author: String,
+  slug: String
 }, {timestamps: true})
 
 var question = mongoose.model('Question', questionSchema)
