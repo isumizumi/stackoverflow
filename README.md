@@ -49,19 +49,20 @@ Stack Overflow is a global forum for developers. User can share or post question
 
 ## Users
 
-      **Route**       |    **HTTP**   |                **Description**
-----------------------|---------------|-----------------------------------------
-|/user/signup         | POST          | Create new user
-|/user/signin         | POST          | Sign in user
-|/user                | GET           | Get all user
-|/user/:username      | GET           | Get one data user
-|/user/:username      | PUT           | Update data user
-|/user/:username      | DELETE        | Delete data user
+  **Route**  |  **HTTP**  |              **Description**
+-------------|------------|------------------------------------------
+| /user/signup    | POST     | Create new user
+| /user/signin    | POST     | Sign in user
+| /user           | GET      | Get all user
+| /user/:username | GET      | Get one data user
+| /user/:username | PUT      | Update data user
+| /user/:username | DELETE   | Delete data user
+
 
 ## Questions
 
-     **Route**            |    **HTTP**   |           **Description**
---------------------------|---------------|---------------------------------------
+  **Route**   |    **HTTP**   |           **Description**
+--------------|---------------|---------------------------------------
 | /question               | GET           | Get all question
 | /question               | POST          | Post new question
 | /question/:slug         | GET           | Get one data question
@@ -72,8 +73,8 @@ Stack Overflow is a global forum for developers. User can share or post question
 
 ## Answers
 
-           **Route**                      | **HTTP** |       **Description**
-------------------------------------------|----------|----------------------------
+   **Route**    | **HTTP** |       **Description**
+----------------|----------|-----------------------------------------------------
 | /question/:id/answer                    | POST     | Post an answer of question
 | /question/:id/answer                    | PUT      | Delete all answer
 | /question/:id/answer/:answerId          | PUT      | Delete one data answer
