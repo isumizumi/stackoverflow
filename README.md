@@ -1,4 +1,4 @@
-# Stack Overflow (my version)
+# Stack Overflow (my version: Kepo-slow!)
 
 Stack Overflow is a global forum for developers. User can share or post questions about anything in programming language, then users can answer many question. User can also vote a question for once.
 
@@ -88,7 +88,7 @@ To install all dependencies:
 > npm i <br>
 
 I'm using:
->npm install express nodemon mocha chai chai-http cors <br>
+>npm install express nodemon mocha chai chai-http cors vue handlebars axios<br>
 >mongodb mongoose jsonwebtoken password-hash<br>
 
 >npm start <br>

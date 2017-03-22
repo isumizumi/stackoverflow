@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Stackoverflow</title>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="ui container" style="margin: 5%;">
+      <form class="ui form" id="create-form">
+        <div class="field">
+          <label>Question Title</label>
+          <input name="question-title" placeholder="Question Title" type="text">
+        </div>
+        <div class="field">
+          <label>Question Content</label>
+          <textarea name="question-content" placeholder="Question Content"></textarea>
+        </div>
+        <button style="width: 20%;" class="ui button blue fluid" id="create-new-question" type="submit">Ask Question</button>
+      </form>
+      <table class="ui celled padded table">
+        <thead>
+          <th class="three coloumn wide" style="text-align: center;">Title</th>
+          <th class="four coloumn wide" style="text-align: center;">Question</th>
+          <th class="three coloumn wide" style="text-align: center;">Answers</th>
+          <th class="one coloumn wide" style="text-align: center;">Votes</th>
+        </thead>
+        <tbody id="list-of-questions"></tbody>
+      </table>
+    </div>
+    <div class="ui long modal">
+      <i class="close icon"></i>
+      <div class="header">
+        Question Detail
+      </div>
+      <div class="content">
+        <table class="ui celled padded table">
+          <thead>
+            <th class="ten coloumn wide">Answer</th>
+            <th class="one coloumn wide">Votes</th>
+          </thead>
+          <tbody id="list-of-answers"></tbody>
+        </table>
+        <div class="ui form">
+          <div class="ui header">Your Answer</div>
+          <label>Answer Title</label>
+          <input id="answer-title" type="text" placeholder="Answer title">
+          <label>Answer Content</label>
+          <textarea id="answer-content" placeholder="Answer"></textarea>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui buttons">
+          <button class="ui black deny button">Cancel</button>
+          <div class="or"></div>
+          <button class="ui positive button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
