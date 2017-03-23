@@ -8,31 +8,31 @@
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.css">
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="ui container" style="margin: 5%; padding: 5%; width: 40%;">
-      <div class="ui inverted segment grid container centered">
-        <form class="ui inverted form" id="login-form">
-          <h1>Login</h1>
-          <hr>
-          <div class="required field">
-            <label style="color: white">Username</label>
-            <input name="username" placeholder="Username" type="text" required>
-          </div>
-          <div class="required field">
-            <label style="color: white">Password</label>
-            <input name="password" placeholder="Password" type="password" required>
-          </div>
-          <button class="ui button" type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
   </body>
+  <script type="text/javascript">
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '384157315316690',
+        cookie     : true,  // enable cookies to allow the server to access
+        // the session
+        xfbml      : true,  // parse social plugins on this page
+        version    : 'v2.8', // use graph api version 2.8
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </html>
